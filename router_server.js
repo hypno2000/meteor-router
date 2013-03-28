@@ -160,7 +160,7 @@
   Meteor.Router = new Router();
   
   // hook up the serving
-  var connect = __meteor_bootstrap__.require("connect");
+  var connect = Npm.require("connect");
   __meteor_bootstrap__.app
     .use(connect.query()) // <- XXX: we can probably assume accounts did this
     .use(connect.bodyParser())
