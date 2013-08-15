@@ -2,9 +2,16 @@ Package.describe({
   summary: "A reactive router built on page.js"
 });
 
+Npm.depends({
+	"connect": "2.8.4"
+});
+
 Package.on_use(function (api, where) {
+  api.use('webapp', 'server');
   api.use('deps', 'client');
   api.use('startup', 'client');
+  api.use('templating', 'client');
+  api.use('handlebars', 'client');
   api.use('page-js-ie-support', 'client');
   api.use('underscore', ['client', 'server']);
   

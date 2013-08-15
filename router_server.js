@@ -161,7 +161,7 @@
   
   // hook up the serving
   var connect = Npm.require("connect");
-  __meteor_bootstrap__.app
+	WebApp.connectHandlers
     .use(connect.query()) // <- XXX: we can probably assume accounts did this
     .use(connect.bodyParser())
     .use(function(req, res, next) {
